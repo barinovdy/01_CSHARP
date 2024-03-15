@@ -3,6 +3,12 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+Task1.txt
+Task2.txt
+Task3.txt
+Task4.txt
+Homework_Seminar2.rar
+
 # dotenv files
 .env
 
