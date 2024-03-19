@@ -28,21 +28,21 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-int NumberCountCheck(int[] array)
+int NumberCountCheck(int[] array, int lastDigit, int multiple)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 10 == 1 && array[i] % 7 == 0) count++;
+        if (array[i] % 10 == lastDigit && array[i] % multiple == 0) count++;
     }
     return count;
 }
 
 
-Console.WriteLine("ВВедите число n: ");
+Console.WriteLine("Введите число n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int[] newArray = CreateArrayRndInt(n, 0, 100);
 PrintArray(newArray);
 Console.WriteLine();
-Console.WriteLine(NumberCountCheck(newArray));
+Console.WriteLine(NumberCountCheck(newArray, 1, 7));
