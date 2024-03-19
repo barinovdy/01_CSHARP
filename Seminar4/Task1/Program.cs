@@ -50,7 +50,7 @@ bool IsPrime(int num)
     return true;
 }
 
-int[] arr = CreateArrayRndInt(5, 1, 100);
+int[] arr = CreateArrayRndInt(10, 1, 1000);
 PrintArray(arr);
 
 int result = CountPrime(arr);
