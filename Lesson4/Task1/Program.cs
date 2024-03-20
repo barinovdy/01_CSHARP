@@ -1,4 +1,8 @@
-﻿int[,] CreateMatrix(int rowCount, int columnCount)
+﻿// Создать двумерный массив с размерами
+// 3 x 5, состоящий из целых чисел
+// Вывести его элементы на экран
+
+int[,] CreateMatrix(int rowCount, int columnCount)
 {
     int[,] matrix = new int[rowCount, columnCount];
     Random rnd = new Random();

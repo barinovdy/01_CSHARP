@@ -1,4 +1,11 @@
-﻿int[,] CreateMatrix(int rowCount, int columnCount)
+﻿// Назовём число «интересным» если его сумма
+// цифр чётная
+// Создать двумерный массив, состоящий из
+// целых чисел. Вывести на экран «интересные»
+// элементы массива
+
+
+int[,] CreateMatrix(int rowCount, int columnCount)
 {
     int[,] matrix = new int[rowCount, columnCount];
     Random rnd = new Random();
