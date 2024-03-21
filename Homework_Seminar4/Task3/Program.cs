@@ -5,16 +5,11 @@ void ReverseArray(int[] array)
 {
     for (int i = 0; i < array.Length / 2; i++)
     {
-        ReverseArrayNumbers(array, i);
+        int temp = 0;
+        temp = array[i];
+        array[i] = array[array.Length - i - 1];
+        array[array.Length - i - 1] = temp;
     }
-}
-
-void ReverseArrayNumbers(int[] array, int pos)
-{
-    int temp = 0;
-    temp = array[pos];
-    array[pos] = array[array.Length - pos - 1];
-    array[array.Length - pos - 1] = temp;
 }
 
 int[] CreateRndArray(int num, int min, int max)
