@@ -53,10 +53,12 @@ double[] ArraySumEverage(int[,] matrix)
 
 void PrintArray(double[] matrix)
 {
+    Console.Write('[');
     for (int i = 0; i < matrix.Length; i++)
     {
         Console.Write($"{matrix[i]} ");
     }
+    Console.WriteLine(']');
 }
 
 int[,] matrixNew = CreateMatrixRndInt(3, 4, 1, 10);
