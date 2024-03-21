@@ -51,11 +51,17 @@ double[] ArraySumEverage(int[,] matrix)
     return array;
 }
 
+void PrintArray(double[] matrix)
+{
+    for (int i = 0; i < matrix.Length; i++)
+    {
+        Console.Write($"{matrix[i]} ");
+    }
+}
+
 int[,] matrixNew = CreateMatrixRndInt(3, 4, 1, 10);
 PrintMatrix(matrixNew);
 
 double[] averageArray = ArraySumEverage(matrixNew);
-for (int i = 0; i < averageArray.Length; i++)
-    {
-        Console.Write($"{averageArray[i]} ");
-    }
+PrintArray(averageArray);
+
