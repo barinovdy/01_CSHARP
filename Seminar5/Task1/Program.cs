@@ -12,18 +12,54 @@
 // 4 3 4 1
 // 2 9 25 4
 
-
-int[] CreateMatrixRndInt(int rows, int colums int min, int max)
+int[,] CreateMatrixRndInt(int rows, int colums, int min, int max)
 {
     int[,] matrix = new int[rows, colums];
     Random rnd = new Random();
 
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(10); ji++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = rnd.Next(min, max);
         }
     }
     return matrix;
 }
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        //Console.Write("|");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i,j], 5}"); //5 - количество символов для вывода
+        }
+        //Console.WriteLine("   |");
+        Console.WriteLine();
+    } 
+}
+
+void ReplaceElemEvenIndexesToSquare(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i+=2) //шагаем по четным индексам
+    {
+        for (int j = 0; j < matrix.GetLength(1); j+=2) //шагаем по четным индексам
+        {
+            //if(i%2==0 $$ j%2 ==0) //можно шагать сразу по четным индексам
+            //{
+                matrix[i, j] *= matrix[i, j];
+            //}
+            
+        }
+    }
+}
+
+
+int[,] array2d = CreateMatrixRndInt(3,4,1,10);
+PrintMatrix(array2d);
+
+ReplaceElemEvenIndexesToSquare(array2d);
+Console.WriteLine();
+PrintMatrix(array2d);
