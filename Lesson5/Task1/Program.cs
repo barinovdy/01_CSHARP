@@ -12,3 +12,7 @@ int Fact(int n)
 }
 
 Console.WriteLine(Fact(5));
+
+//F11 шаг с заходом
+//F10 шаг с обходом
+//F5 продолжить
