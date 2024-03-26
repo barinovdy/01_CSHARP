@@ -33,7 +33,7 @@ void ShowArray(int[] array)
     Console.WriteLine(']');
 }
 
-int[] arr = CreateRndArray(10, 1, 10);
+int[] arr = CreateRndArray(5, 1, 10);
 ShowArray(arr);
 ReverseArray(arr);
 ShowArray(arr);
