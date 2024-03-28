@@ -35,7 +35,7 @@ int[] FirstWordLetterIndex(int wordsNum, string str, string strCor)
     {
         if (str[i].ToString() == " ")
         {
-            wordsIndex[index] = i - index + 1;//0 3 7 10
+            wordsIndex[index] = i - index + 1;
             index++;
         }
     }
