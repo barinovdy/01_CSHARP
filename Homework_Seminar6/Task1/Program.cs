@@ -3,15 +3,20 @@
 // a b c => “abcdef”
 // d e f 
 
-char[,] CharArray = new char[,] { { 'a', 'b', 'c' },{ 'd', 'e', 'f' } };
-string str = "";
-
-for (int i = 0; i < CharArray.GetLength(0); i++)
+string ArrayToString(char[,] array)
 {
-    for (int j = 0; j < CharArray.GetLength(1); j++)
+    string str = "";
+
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        str = str + CharArray[i, j];
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            str = str + array[i, j];
+        }
     }
+    return str;
 }
 
-Console.WriteLine(str);
+char[,] CharArray = new char[,] { { 'a', 'b', 'c' }, { 'd', 'e', 'f' } };
+
+Console.WriteLine(ArrayToString(CharArray));
