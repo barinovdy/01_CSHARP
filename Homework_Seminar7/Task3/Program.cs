@@ -24,18 +24,13 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-void ReverseArray(int[] array)
-{
-    PrintArrayElm(array, array.Length);
-}
-
-void PrintArrayElm(int[] array, int index)
+void PrintReverseArray(int[] array, int index)
 {
     if (index == 0) return;
     Console.Write($"{array[index - 1]} ");
-    PrintArrayElm(array, index - 1);
+    PrintReverseArray(array, index - 1);
 }
 
-int[] arr = CreateArrayRndInt(10, 1, 20);
+int[] arr = CreateArrayRndInt(5, 1, 100);
 PrintArray(arr);
-ReverseArray(arr);
+PrintReverseArray(arr, arr.Length);
