@@ -7,8 +7,8 @@
 
 void PrintNaturalNumbers(int num)
 {
-    if(num == 0) return;
-    PrintNaturalNumbers(num-1);
+    if (num == 0) return;
+    PrintNaturalNumbers(num - 1);
     Console.Write($"{num} ");
 }
 
