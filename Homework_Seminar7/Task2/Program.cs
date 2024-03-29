@@ -8,6 +8,7 @@ int AkkerFunction(int m, int n)
     else return AkkerFunction(m - 1, AkkerFunction(m, n - 1));
 }
 
+Console.WriteLine("Вычисление функции Аккермана A(m,n).");
 Console.Write("Введите неотрицательное число m: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите неотрицательное число n: ");
